@@ -1,0 +1,42 @@
+--------------Entity এবং Database-------------- 
+
+1. Entity কী?
+Entity হল বাস্তব বা কাল্পনিক যে কোনো কিছু, যার সম্পর্কে ডেটাবেজে তথ্য সংরক্ষণ করা হয়। এটি হতে পারে কোনো বস্তু, ব্যক্তি, স্থান, ইভেন্ট, বা ধারণা।
+
+2. Entity এর বৈশিষ্ট্য (Characteristics of Entity)
+একটি Entity এর কিছু গুরুত্বপূর্ণ বৈশিষ্ট্য থাকে, যেমন:
+
+উল্লেখযোগ্যতা (Identifiability): Entity গুলো স্বতন্ত্র হতে হয়।
+Attributes (গুণাবলী): Entity-র তথ্য সংরক্ষণ করতে কিছু গুণাবলী বা Attribute থাকে।
+Unique Identifier (প্রত্যেক Entity এর একটি স্বতন্ত্র চিহ্ন থাকে)
+3. Entity এবং Attribute
+Entity-এর বৈশিষ্ট্য সংরক্ষণের জন্য Attribute ব্যবহৃত হয়। দুই ধরনের Attribute থাকতে পারে:
+
+Simple Attribute: যেগুলো ভেঙে ছোট অংশ করা যায় না। (যেমন: নাম, বয়স)
+Composite Attribute: যেগুলো ছোট ছোট অংশে বিভক্ত করা যায়। (যেমন: "পূর্ণ নাম" → প্রথম নাম + শেষ নাম)
+4. Entity এবং Database এর সম্পর্ক
+একটি Database মূলত Entity ও তাদের Attributes সংরক্ষণ করার জন্য ব্যবহৃত হয়। একটি Entity সাধারণত একটি টেবিল হিসাবে ডাটাবেজে সংরক্ষিত হয়, যেখানে প্রতিটি Row (Tuple) একেকটি Entity কে নির্দেশ করে এবং প্রতিটি Column (Field) Attribute কে নির্দেশ করে।
+
+5. Entity Types
+Entities বিভিন্ন রকমের হতে পারে, যেমন:
+
+Strong Entity: যেগুলোর অস্তিত্ব নির্ভরশীল নয় অন্য কোনো Entity-র উপর। এদের Primary Key থাকে।
+Weak Entity: যেগুলোর অস্তিত্ব নির্ভরশীল অন্য কোনো Entity-র উপর এবং Primary Key থাকে না। এগুলোকে আলাদা করতে অন্য Entity-র সাথে Relationship এবং Partial Key ব্যবহৃত হয়।
+6. Entity Relationship (ER) Model
+Entity এবং তাদের মধ্যে সম্পর্ক দেখানোর জন্য ER Model ব্যবহার করা হয়।
+ER Model-এ মূলত তিনটি উপাদান থাকে:
+
+Entities (সত্তা) → যেমন "Student"
+Attributes (গুণাবলী) → যেমন "Student ID", "Name"
+Relationships (সম্পর্ক) → যেমন "Student" এবং "Course" এর মধ্যে "Enrolls" সম্পর্ক
+7. Entity Relationship Diagram (ERD)
+ERD (Entity Relationship Diagram) হল Entity ও তাদের Attributes এবং সম্পর্কগুলো গ্রাফিক্যালভাবে উপস্থাপন করার পদ্ধতি।
+
+8. Entity এর Cardinality
+Cardinality বুঝায় এক Entity অন্য Entity-র সাথে কীভাবে সংযুক্ত হবে। এর কিছু ধরন:
+
+One-to-One (1:1) → একটি পাসপোর্ট কেবলমাত্র এক ব্যক্তির হতে পারে।
+One-to-Many (1:M) → একজন শিক্ষক অনেক ছাত্র পড়াতে পারে, কিন্তু একজন ছাত্র কেবল এক শিক্ষকের অধীনে থাকতে পারে।
+Many-to-Many (M:M) → একজন ছাত্র একাধিক কোর্স নিতে পারে এবং এক কোর্স অনেক ছাত্র নিতে পারে।
+9. Entity Normalization
+Entity গুলোর মধ্যে সম্পর্ক ভালোভাবে তৈরি করার জন্য Normalization করা হয়, যা ডাটাবেজের অতিরিক্ত ডাটা বা ডুপ্লিকেশন কমাতে সাহায্য করে।
