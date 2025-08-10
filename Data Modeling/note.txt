@@ -2,6 +2,9 @@
 
 1. Entity কী?
 Entity হল বাস্তব বা কাল্পনিক যে কোনো কিছু, যার সম্পর্কে ডেটাবেজে তথ্য সংরক্ষণ করা হয়। এটি হতে পারে কোনো বস্তু, ব্যক্তি, স্থান, ইভেন্ট, বা ধারণা।
+soja banglay jodi boli tahole entity holo amra jei software banabo sei software er jonno oi jinish tar kono nirvorshilota ache kina . jodi thake tahole seta oi system er jonno entity. jemon amra jodi kono school er jonno school management system banaite chai tahole school er chair table kono entity na . karon school management system er jonno egular kono dorkar nai . kintu jodi oi school er jonno inventory system banaite chai tokhon school er chair table entity hoye jabe .  
+
+People(Employees, Students, Payroll, Pensions, Sick Leave, Vendors) , Things(Furniture, Equipment, Books, Packages, Raw Materials) , Locations(Offices, Addresses, Warehouses, Stock Rooms, Floors) , Events (Purchase order, invoice, delivery received, Check in/ out, Meeting arrange, order confirm) ------- ekhane Events onk gurutto purno entity . karon jodi amar ecom system e product thake , warehouse thake , shop thake but eder moddhe kono interaction/events na ghote tahole system kivabe cholbe ? tai eder moddhe interaction thaka ta onk important tai events ekta system er khubii gurutto purno entity. kono product order porlo kina, kon user kon product purchase korlo egula sobii events entity . 
 
 2. Entity এর বৈশিষ্ট্য (Characteristics of Entity)
 একটি Entity এর কিছু গুরুত্বপূর্ণ বৈশিষ্ট্য থাকে, যেমন:
