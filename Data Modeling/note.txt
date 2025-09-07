@@ -121,4 +121,13 @@ Customer-এর সাথে Order → Double Line দিয়ে যুক্ত
 
 Attribute : attribute holo kono entity ke niye kichu information . kono Entity jokhon ami database e rakhbo tokhon sei entityr kichu information amake preserve kore rakhte hoy . jemon products ekta entity . kintu oi products er size, amount , variant etc onk information preserve kore rakhte hoy . setaii attribute . 
 
+Attributes abar 2 prokar . 
+1. Simple Attribute 
+2. Composite Attribute
+
+1. Simple Attribute -- jei attribute ke alada kore r vanga jay na seta Simple Attribute 
+2. Composite Attribute -- jei attribute ke alada kore onk vabe vanga jay seta Composite Attribute 
+
+
+
 
