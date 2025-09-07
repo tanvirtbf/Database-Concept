@@ -112,3 +112,13 @@ Customer-এর সাথে Order → Double Line দিয়ে যুক্ত
 🔸 নিজে টিকে থাকতে পারে না
 🔸 Strong Entity-এর Key ব্যবহার করে চিহ্নিত হয়
 🔸 ER Diagram-এ Double Rectangle দিয়ে বোঝানো হয়
+
+
+1. Entity Type : Products ekta Entity type . karon Products er moddhe phone , watch , pencil etc thakte pare . abar Customers ekta entity type karon er moddhe Tanvir, sabbir, rifat etc thakte pare 
+2. Entity Set : Course ekta Entity type . kintu jodi erokom hoy kichu kichu course hide kora hoise , tar mane system e onk gula course er moddhe nirdishto condition er basis e kichu course ke alada kora hoise setaii Entity set 
+3. Weak Entity Set : jemon kono post er under e 100 ta comment . comment ekta weak entitiy karon post chara comment er existing nai . jehetu 100 comment tai ami to sob comment eksathe dekhabo na . dhoren first 4 ta dekhabo . pore button dilam load more . oi button e click korle aro 4 ta show hocche . ekhane 4 ta 4 ta kore vag kore deya hoise comment gula ke . sob gulaii weak entitiy . ai 4 ta keii weak entitiy set bole . 
+
+
+
+
+
