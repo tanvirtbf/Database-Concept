@@ -128,6 +128,8 @@ Attributes abar 2 prokar .
 1. Simple Attribute -- jei attribute ke alada kore r vanga jay na seta Simple Attribute 
 2. Composite Attribute -- jei attribute ke alada kore onk vabe vanga jay seta Composite Attribute 
 
+jemon ekta customer er phone, email, name, membership , payment method ai attribute e multiple data thakte pare . jemon name ke venge firstname, lastname ,middlename then shipping address ke venge city, state, country then membership ke venge type, expire_date , start_date etc erokom vabe ekta attribute ke onk vabe vanga jay . egula Composite attribute . abar jodi phone number er kotha boli tahole seta simple o hote pare abar composite o hote pare . 
 
+tar mane kono attribute ke venge onk gula attribute korle sei attribute ke composite attribute bole 
 
 
