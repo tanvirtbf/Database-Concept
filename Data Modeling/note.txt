@@ -137,3 +137,19 @@ tar mane kono attribute ke venge onk gula attribute korle sei attribute ke compo
 
 kichu kichu attribute ase jara ekii sathe composite + multivalued segula ke amra bolbo Complex attribute . jemon {Address(Title, District, Thana, Vill, Post, Road)}
 abar jemon shipping address . ekjon user er multiple shipping address thakte pare , abar prottekta address er city, state, country attibute thakbe 
+
+
+Attribute Types : 
+
+1. Derived : Can/Should be calculated from other attribute --- age  
+2. Stored : Independent Information, Need to be stored --- Date of Birth
+
+ekhane age calculate korte gele amar onno attribute theke calculate korte hobe , jemon Date of Birth attribute theke calculate kore Age ber korte hobe but Date of birth er data onno attribute theke anar dorkar nai 
+
+
+
+
+
+
+
+
