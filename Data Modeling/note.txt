@@ -147,8 +147,16 @@ Attribute Types :
 ekhane age calculate korte gele amar onno attribute theke calculate korte hobe , jemon Date of Birth attribute theke calculate kore Age ber korte hobe but Date of birth er data onno attribute theke anar dorkar nai 
 abar fullName Derived type attribute karon firstName, lastName theke calculate kore fullName ber kora hoy , alada vabe store korte hoy na 
 
+Key Attributes : ekta entity or table er jei attribute unique data hold kore seta Key Attribute . jemon ekta table er name key attribute hote pare na but phone number, email egula key attribute hote pare 
+
+key attribute abar 3 prokar 
+1. Primary Key : jei attribute ke oi table er unique attribute or primary attribute banano hoy jate ekta data uniquely identify kora jay seta Primary Key 
+2. Candidate Key : ekta table e onk gula unique data wala attribute thakte pare , jemon phone number , email , studentId, Nid number etc. but ami to only 1 ta attribute ke primary key banate parbo tahole baki attribute gula tokhon Candidate key hishebe thakbe . 
+3. Composite Key : kichu kichu somoy ekadhik candidate key or unique attribute ke eksathe kore primary key banano hoy . seta ke bole composite key . kintu eta keno ? dhoren apnar ekta user ase jar ekta number ase . kintu se apnar site e account disable kore dite chay and disable kore dise . kintu se jodi again oi number diye register korte chay tokhon kintu ami take register korbo na karon already ai number e account ase/chilo . kintu ami jodi ekii sathe register_date and number eksathe kore primary key banai tahole kintu register korte parto . tai eta ke composite key bole 
 
 
+
+RelationShip 
 
 
 
