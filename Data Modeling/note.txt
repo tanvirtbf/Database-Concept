@@ -132,4 +132,8 @@ jemon ekta customer er phone, email, name, membership , payment method ai attrib
 
 tar mane kono attribute ke venge onk gula attribute korle sei attribute ke composite attribute bole 
 
+1. Single Valued : jodi kono attribute er 1 ta value thake tahole Single Valued attribute . jemon AGE
+2. Multi Valued: jodi kono attribute er set of values thake tahole seta Multi Valued attribute . Jemon Educational Certificate 
 
+kichu kichu attribute ase jara ekii sathe composite + multivalued segula ke amra bolbo Complex attribute . jemon {Address(Title, District, Thana, Vill, Post, Road)}
+abar jemon shipping address . ekjon user er multiple shipping address thakte pare , abar prottekta address er city, state, country attibute thakbe 
