@@ -156,8 +156,6 @@ key attribute abar 3 prokar
 
 
 
-RelationShip 
-
 
 
 
