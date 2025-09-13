@@ -32,3 +32,45 @@ Product → Price (দাম)
 Address → House No + Road No + City + Country
 
 Date → Day + Month + Year
+
+
+Entity এবং Database এর সম্পর্ক
+
+ডাটাবেজ (Database) মূলত Entity এবং তাদের Attribute সংরক্ষণের জায়গা।
+
+👉 সহজ করে বললে:
+
+Entity → Table (টেবিল) আকারে সংরক্ষণ করা হয়
+
+Entity-এর Attribute → Column (Field)
+
+Entity-এর প্রতিটি আলাদা অবজেক্ট → Row (Tuple)
+
+উদাহরণ: Student Entity
+
+Entity: Student
+Attributes: Student_ID, Name, Age, Class
+
+Student_ID	Name	Age	Class
+1	Rahim	15	9
+2	Karim	16	10
+3	Ayesha	14	8
+
+এখানে Student হলো Entity → যা ডাটাবেজে একটা Table।
+
+টেবিলের প্রতিটি Column (Student_ID, Name, Age, Class) → Attribute।
+
+প্রতিটি Row (Rahim, Karim, Ayesha) → আলাদা আলাদা Student Entity।
+
+Key Point (মনে রাখার জন্য)
+
+Database = Entity এবং Attribute রাখার জায়গা।
+
+Entity = Database Table
+
+Attribute = Table Column
+
+Row (Tuple) = প্রতিটি আলাদা Entity instance
+
+✅ এক লাইনে মনে রাখুন:
+Entity → Table, Attribute → Column, Row → Entity-এর Instance
