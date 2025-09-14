@@ -288,4 +288,67 @@ Associative/Intersection Entity = Many-to-Many Relationship ভাঙার জ�
 
 
 
+Generalization এবং Specialization
+
+এই দুটো ধারণা মূলত Entity Relationship (ER) Model-এর অংশ, যেখানে আমরা Entity-কে Classify করি।
+
+🔹 1. Generalization (সাধারণীকরণ)
+
+👉 Generalization হলো একাধিক Entity-র common property একত্র করে একটি General (উচ্চতর) Entity বানানো।
+
+📌 সহজভাবে বললে:
+“যদি দুই বা ততোধিক Entity-এর মধ্যে মিল থাকে, তখন তাদের মিলগুলোকে একত্র করে একটা General Entity বানাই।”
+
+📝 Example (Generalization):
+
+আমাদের কাছে তিনটা Entity আছে:
+
+Car → Attributes: CarID, Model, Color
+
+Bike → Attributes: BikeID, Model, Color
+
+Bus → Attributes: BusID, Model, Color
+
+👉 এখন আমরা দেখছি যে তিনটিরই কিছু Common Attribute আছে (Model, Color)।
+তাহলে এগুলোকে একত্র করে Vehicle নামের একটি General Entity বানানো যায়।
+
+Vehicle (General Entity) → VehicleID, Model, Color
+
+এরপর Car, Bike, Bus → Vehicle থেকে Inherit করবে।
+
+✅ এখানে Vehicle হলো Generalized Entity আর Car, Bike, Bus হলো Specialized Entity।
+
+🔹 2. Specialization (বিশেষায়ন)
+
+👉 Specialization হলো একটি General Entity থেকে আলাদা আলাদা Specific Entity বানানো।
+অর্থাৎ, General থেকে Specific-এর দিকে যাওয়া।
+
+📌 সহজভাবে বললে:
+“যদি কোনো Entity-কে আরও স্পেসিফিকভাবে ভাগ করা যায়, তখন সেটা Specialization।”
+
+📝 Example (Specialization):
+
+আমাদের কাছে একটা Entity আছে: Employee
+
+Attributes: EmpID, Name, Salary
+
+👉 এখন আমরা Employee-কে দুই ভাগে ভাগ করতে পারি:
+
+Teacher → EmpID, Name, Salary, Subject
+
+AdminStaff → EmpID, Name, Salary, Department
+
+✅ এখানে Employee হলো General Entity, আর Teacher / AdminStaff হলো Specialized Entities।
+
+🔄 Generalization বনাম Specialization
+বিষয়	Generalization	Specialization
+দিক	Specific → General	General → Specific
+উদ্দেশ্য	Common attribute একত্র করা	আলাদা entity-তে বিস্তারিত attribute যোগ করা
+Example	Car + Bike + Bus → Vehicle	Employee → Teacher, AdminStaff
+🎯 সহজভাবে মনে রাখার ট্রিক
+
+Generalization = “একত্র করা” → একাধিক Entity মিলিয়ে একটা বড় General Entity
+
+Specialization = “ভাগ করা” → একটা Entity-কে ভেঙে ছোট Specific Entity
+
 
