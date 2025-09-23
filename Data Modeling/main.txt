@@ -14,6 +14,9 @@ Topic :
 11. Single Valued Attribute
 12. Multi Valued Attribute
 13. Complex Attribute 
+14. Stored Attibute
+15. Derived Attribute
+16. Key Attribute 
 
 
 
@@ -75,8 +78,26 @@ Composite Attribute + MultiValued Attribute = Complex Attribute .
 Example : Address (Title, District, Thana, Village, Post, Road) ----- ekhane Address karo karo multi address thakte pare abar prottekta single address abar onk gula attribute e vag korte hoy . tai eta Complex Attribute 
 
 
+jemon ekta customer er phone, email, name, membership , payment method ai attribute e multiple data thakte pare . jemon name ke venge firstname, lastname ,middlename then shipping address ke venge city, state, country then membership ke venge type, expire_date , start_date etc erokom vabe ekta attribute ke onk vabe vanga jay . egula Composite attribute . abar jodi phone number er kotha boli tahole seta simple o hote pare abar composite o hote pare . 
 
 
+Attribute 2 Types : 
+- Stored : Independent Information, Need to be stored --- Date of Birth
+- Derived : Can/Should be calculated from other attribute --- age  
 
 
+14. Stored Attibute : 
+jei information store kore rakhar jonno onno attribute theke information ante hoy na setaii Stored Attribute . jemon Date of Birth 
+
+
+15. Derived Attribute : 
+jei information store kore rakhar jonno onno attribute theke information ante hoy setaii Derived Attribute . jemon AGE . ekhane age calculate korte hole date of birth theke today date calculate kore tar Age ber korte hoy . keu directly age store korte pare na . karon age protiniyoto changes hoy 
+
+
+ekhane age calculate korte gele amar onno attribute theke calculate korte hobe , jemon Date of Birth attribute theke calculate kore Age ber korte hobe but Date of birth er data onno attribute theke anar dorkar nai 
+abar fullName Derived type attribute karon firstName, lastName theke calculate kore fullName ber kora hoy , alada vabe store korte hoy na 
+
+
+16. Key Attribute : 
+jei attribute er information diye oi entity data gula ke uniquely identify korte pari setaii Key Attribute . Jemon NID Number , Student Id, Roll Number , phone Number etc . etaii mainly kichu kichu khetre pore Primary key hoye jay
 
