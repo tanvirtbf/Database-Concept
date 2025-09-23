@@ -1,4 +1,5 @@
 Topic : 
+
 1. Entity 
 2. Strong Entity 
 3. Weak Entity 
@@ -7,6 +8,7 @@ Topic :
 6. Entity Set 
 7. Weak Entity Set
 
+8. Attribute
 
 
 
@@ -44,4 +46,23 @@ Course ekta Entity type . kintu jodi erokom hoy kichu kichu course hide kora hoi
 
 7. Weak Entity Set : 
 jemon kono post er under e 100 ta comment . comment ekta weak entitiy karon post chara comment er existing nai . jehetu 100 comment tai ami to sob comment eksathe dekhabo na . dhoren first 4 ta dekhabo . pore button dilam load more . oi button e click korle aro 4 ta show hocche . ekhane 4 ta 4 ta kore vag kore deya hoise comment gula ke . sob gulaii weak entitiy . ai 4 ta keii weak entitiy set bole . 
+
+
+8. Attribute : attribute holo kono entity ke niye kichu information . kono Entity jokhon ami database e rakhbo tokhon sei entityr kichu information amake preserve kore rakhte hoy . jemon products ekta entity . kintu oi products er size, amount , variant etc onk information preserve kore rakhte hoy . setaii attribute . 
+Attributes abar 2 prokar: 
+- Simple Attribute 
+- Composite Attribute
+
+9.  Simple Attribute -- jei attribute ke alada kore r vanga jay na seta Simple Attribute . jemon phone_number, email etc. 
+
+10. Composite Attribute -- jei attribute ke alada kore onk vabe vanga jay seta Composite Attribute . jemon Name(first_name, last_name, title), address(city, state, country), membership(type, expire_date, start_date) etc
+
+
+
+
+
+
+
+
+
 
