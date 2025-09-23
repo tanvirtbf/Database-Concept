@@ -1,4 +1,11 @@
-Topic : Entity , Strong Entity , Weak Entity , Strong Entity VS Weak Entity
+Topic : 
+1. Entity 
+2. Strong Entity 
+3. Weak Entity 
+4. Strong Entity VS Weak Entity
+5. Entity Type 
+6. Entity Set 
+7. Weak Entity Set
 
 
 
@@ -27,3 +34,14 @@ People(Employees, Students, Payroll, Pensions, Sick Leave, Vendors) , Things(Fur
 অন্যদিকে, Weak Entity হলো এমন একটি সত্তা যেটার নিজের কোনো ইউনিক Primary Key থাকে না এবং এটি সবসময় একটি Strong Entity-র উপর নির্ভরশীল হয়ে থাকে। Weak Entity-কে Strong Entity-র সাথে যুক্ত হয়ে Composite Key বা Partial Key ব্যবহার করে আলাদা করা হয়। উদাহরণস্বরূপ, Order(OrderID, OrderDate) একটি Strong Entity, কিন্তু OrderItem(OrderID, ProductID, Quantity) একটি Weak Entity, কারণ এটি একা কোনো Order ছাড়া থাকতে পারে না। এখানে OrderItem টেবিলের Primary Key তৈরি হয় OrderID + ProductID মিলে। Weak Entity-কে ER Diagram-এ Double Rectangle দিয়ে এবং এর সম্পর্ককে (Identifying Relationship) Double Diamond দিয়ে বোঝানো হয়।
 
 সংক্ষেপে, Strong Entity হলো স্বাধীন এবং নিজস্ব Primary Key যুক্ত entity, আর Weak Entity হলো নির্ভরশীল এবং Strong Entity ছাড়া অস্তিত্বহীন entity। Strong Entity একা ডাটাবেসে থাকতে পারে, কিন্তু Weak Entity সবসময় Strong Entity-র সাথে যুক্ত থাকতে বাধ্য।
+
+
+5. Entity Type : 
+Products ekta Entity type . karon Products er moddhe phone , watch , pencil etc thakte pare . abar Customers ekta entity type karon er moddhe Tanvir, sabbir, rifat etc thakte pare 
+
+6. Entity Set : 
+Course ekta Entity type . kintu jodi erokom hoy kichu kichu course hide kora hoise , tar mane system e onk gula course er moddhe nirdishto condition er basis e kichu course ke alada kora hoise setaii Entity set 
+
+7. Weak Entity Set : 
+jemon kono post er under e 100 ta comment . comment ekta weak entitiy karon post chara comment er existing nai . jehetu 100 comment tai ami to sob comment eksathe dekhabo na . dhoren first 4 ta dekhabo . pore button dilam load more . oi button e click korle aro 4 ta show hocche . ekhane 4 ta 4 ta kore vag kore deya hoise comment gula ke . sob gulaii weak entitiy . ai 4 ta keii weak entitiy set bole . 
+
