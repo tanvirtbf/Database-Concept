@@ -18,6 +18,8 @@ Topic :
 15. Derived Attribute
 16. Key Attribute 
 
+17. Null Values
+
 
 
 1. Entity কী?
@@ -107,6 +109,11 @@ key attribute abar 3 prokar
 - Primary Key : jei attribute ke oi table er unique attribute or primary attribute banano hoy jate ekta data uniquely identify kora jay seta Primary Key 
 - Candidate Key : ekta table e onk gula unique data wala attribute thakte pare , jemon phone number , email , studentId, Nid number etc. but ami to only 1 ta attribute ke primary key banate parbo tahole baki attribute gula tokhon Candidate key hishebe thakbe . 
 - Composite Key : kichu kichu somoy ekadhik candidate key or unique attribute ke eksathe kore primary key banano hoy . seta ke bole composite key . kintu eta keno ? dhoren apnar ekta user ase jar ekta number ase . kintu se apnar site e account disable kore dite chay and disable kore dise . kintu se jodi again oi number diye register korte chay tokhon kintu ami take register korbo na karon already ai number e account ase/chilo . kintu ami jodi ekii sathe register_date and number eksathe kore primary key banai tahole kintu register korte parto . tai eta ke composite key bole 
+
+
+17. Null Values 
+jokhon kono field e data rakhar scope ase but sekhane kono data nei tokhon sekhane Null hobe . karon Null mane 0 na , Null mane undefined na , Null mane empty string na . Null Mane holo kono value nei . 0 ekta value, empty string ekta value but Null mane holo kono value nei 
+
 
 
 
