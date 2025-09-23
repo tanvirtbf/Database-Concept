@@ -24,9 +24,9 @@ Topic :
 19. Unary Relationship
 20. Binary Relationship
 21. Ternary Relationship
-22. 
-23. 
-24. 
+22. Cardinality Ratio
+23. Crows Foot Diagram
+24. Participation Constraints
 25. 
 
 
@@ -159,5 +159,25 @@ Many-to-Many (M:N) → একটি Entity-র অনেক instance অপর E
 অর্থাৎ, Cardinality Ratio হলো ডাটাবেজে সম্পর্কের শক্তি বা পরিমাণ প্রকাশ করার একটি উপায়, যা Entity গুলোর মধ্যে সঠিক বাস্তব সংযোগ স্থাপন করতে সাহায্য করে।
 
 
+23. Crows Foot Diagram : 
+Crow’s Foot Notation হলো একটি জনপ্রিয় পদ্ধতি, যেটি ER Diagram (Entity-Relationship Diagram)-এ Relationship এবং Cardinality বোঝানোর জন্য ব্যবহার করা হয়। এটি দেখতে কাকের পায়ের মতো তিনটি শাখা বা রেখার মতো হওয়ায় এর নাম হয়েছে “Crow’s Foot”। এর মাধ্যমে খুব সহজে বোঝানো যায় একটি Entity আরেকটি Entity-র সাথে কতভাবে যুক্ত হতে পারে (One, Many, Optional, Mandatory)।
 
+Crow’s Foot Symbol গুলো মূলত চার ধরনের:
+Zero (Optional) → একটি বৃত্ত (○) দিয়ে বোঝানো হয় যে, একটি Entity অপর Entity-র সাথে যুক্ত নাও থাকতে পারে। যেমন: একজন ছাত্রের এখনো কোনো কোর্সে ভর্তি না-ও থাকতে পারে।
+One (Mandatory) → একটি সোজা দাগ (|) দিয়ে বোঝানো হয় যে, একটি Entity অপর Entity-র সাথে অবশ্যই একটি instance দ্বারা যুক্ত হবে। যেমন: প্রতিটি অর্ডারের একজন কাস্টমার থাকা বাধ্যতামূলক।
+Many (Crow’s Foot) → তিনটি শাখা বা "কাকের পা" (⇉ এর মতো) দিয়ে বোঝানো হয় অনেক instance-এর সাথে সম্পর্ক। যেমন: একজন শিক্ষক অনেক ছাত্রকে পড়াতে পারেন।
+Combination (Zero or Many, One or Many ইত্যাদি) → চিহ্নগুলো একসাথে ব্যবহার করে আরও নির্দিষ্ট করা হয়।
+Zero or Many (○⇉) → থাকতে-ও পারে, আবার অনেকগুলো instance হতে-ও পারে।
+One or Many (|⇉) → অন্তত একটি থাকতে হবে, তবে অনেকগুলোও হতে পারে।
+👉 অর্থাৎ, Crow’s Foot Notation একটি ভিজ্যুয়াল ভাষা, যা দিয়ে ডাটাবেজ ডিজাইনে খুব সহজে বোঝানো যায় একটি Entity অন্যটির সাথে কীভাবে যুক্ত হচ্ছে এবং সেই সংযোগ কতটা শক্ত বা নমনীয়।
+
+
+24. Participation Constraints : 
+kono relationship e entity gula participate korar upor nirvor kore ai term . 
+- Partial Participation 
+- Total Participation 
+
+dhoren student and certificate er moddhe relationship ase . student certificate pay . kintu jodi diagram er moto chinta kori left side e rectangle shape er moddhe Student Entity and Right side e Rectangle shape er moddhe Certificate Entity and middle e diamond shape er moddhe tader relationship name . akhn sob student er kintu certificate thake na but sob certificate er jonnoii kintu student ase . mane prottekta certificate kono na kono student er jonno ase but sob student er kintu certificate hoy na . ei condition er upor vitti koreii kintu Partial Participation and Total Participation count kora hoy . ekhane Student Entityr sathe single line tana hobe relationship er diamond shape er sathe . karon eta Partial Participation . karon sob student er certificate hoy na . sob student er moddhe kichu student er certificate hoy . but diamond shape er relationship  er sathe Certificate entityr double line tana ase . karon tara Total Participation . mane sob certificate kono na kono student er . 
+
+arekta example hocche Employee Manages Department . ekhane Employee and Department entity , Manages holo tader moddhe relationship . Employee er sathe Manages er single line thakbe karon eta Partial Participation but Manages er sathe Department er Total Participation tai double line thakbe . karon sob employee ra Manager hoy na  but prottekta department er obosshoi ekjon employee manager hoy . 
 
