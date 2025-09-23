@@ -1,0 +1,29 @@
+Topic : Entity , Strong Entity , Weak Entity , Strong Entity VS Weak Entity
+
+
+
+
+
+1. Entity কী?
+Entity হল বাস্তব বা কাল্পনিক যে কোনো কিছু, যার সম্পর্কে ডেটাবেজে তথ্য সংরক্ষণ করা হয়। এটি হতে পারে কোনো বস্তু, ব্যক্তি, স্থান, ইভেন্ট, বা ধারণা।
+soja banglay jodi boli tahole entity holo amra jei software banabo sei software er jonno oi jinish tar kono nirvorshilota ache kina . jodi thake tahole seta oi system er jonno entity. jemon amra jodi kono school er jonno school management system banaite chai tahole school er chair table kono entity na . karon school management system er jonno egular kono dorkar nai . kintu jodi oi school er jonno inventory system banaite chai tokhon school er chair table entity hoye jabe .  
+
+People(Employees, Students, Payroll, Pensions, Sick Leave, Vendors) , Things(Furniture, Equipment, Books, Packages, Raw Materials) , Locations(Offices, Addresses, Warehouses, Stock Rooms, Floors) , Events (Purchase order, invoice, delivery received, Check in/ out, Meeting arrange, order confirm) ------- ekhane Events onk gurutto purno entity . karon jodi amar ecom system e product thake , warehouse thake , shop thake but eder moddhe kono interaction/events na ghote tahole system kivabe cholbe ? tai eder moddhe interaction thaka ta onk important tai events ekta system er khubii gurutto purno entity. kono product order porlo kina, kon user kon product purchase korlo egula sobii events entity . 
+
+2. Strong Entity : 
+👉 Strong Entity হলো এমন Entity যেটার নিজস্ব Primary Key থাকে এবং এটি অন্য কোনো Entity-র উপর নির্ভর করে না।
+অর্থাৎ, এই Entity একা দাঁড়াতে পারে।
+
+
+3. Weak Entity : 
+- Do not have independent existence
+- Always connected and dependent on other Strong Entity
+- May not have a key attribute
+- Represented using a double rectangle
+
+4. Strong Entity এবং Weak Entity : 
+ডেটাবেস ডিজাইনে Strong Entity হলো এমন একটি সত্তা (entity) যেটার নিজস্বভাবে একটি ইউনিক Primary Key থাকে এবং অন্য কোনো entity-র উপর নির্ভর করতে হয় না। এটি একাই স্বাধীনভাবে ডাটাবেসে থাকতে পারে। উদাহরণস্বরূপ, Student(StudentID, Name, Email) অথবা Product(ProductID, Name, Price) হলো Strong Entity, কারণ এখানে StudentID বা ProductID নিজেরাই Primary Key এবং এগুলো অন্য কোনো entity-র উপর নির্ভর করছে না। ER Diagram-এ Strong Entity-কে Single Rectangle দিয়ে দেখানো হয়।
+
+অন্যদিকে, Weak Entity হলো এমন একটি সত্তা যেটার নিজের কোনো ইউনিক Primary Key থাকে না এবং এটি সবসময় একটি Strong Entity-র উপর নির্ভরশীল হয়ে থাকে। Weak Entity-কে Strong Entity-র সাথে যুক্ত হয়ে Composite Key বা Partial Key ব্যবহার করে আলাদা করা হয়। উদাহরণস্বরূপ, Order(OrderID, OrderDate) একটি Strong Entity, কিন্তু OrderItem(OrderID, ProductID, Quantity) একটি Weak Entity, কারণ এটি একা কোনো Order ছাড়া থাকতে পারে না। এখানে OrderItem টেবিলের Primary Key তৈরি হয় OrderID + ProductID মিলে। Weak Entity-কে ER Diagram-এ Double Rectangle দিয়ে এবং এর সম্পর্ককে (Identifying Relationship) Double Diamond দিয়ে বোঝানো হয়।
+
+সংক্ষেপে, Strong Entity হলো স্বাধীন এবং নিজস্ব Primary Key যুক্ত entity, আর Weak Entity হলো নির্ভরশীল এবং Strong Entity ছাড়া অস্তিত্বহীন entity। Strong Entity একা ডাটাবেসে থাকতে পারে, কিন্তু Weak Entity সবসময় Strong Entity-র সাথে যুক্ত থাকতে বাধ্য।
