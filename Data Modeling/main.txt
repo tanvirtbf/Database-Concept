@@ -73,6 +73,7 @@ jei attribute er single value thakbe, multi value hobe na setake Single Valued A
 12. Multi Valued Attribute : 
 jei attribute er value multiple thakte pare take multi valued attribute bole . jemon phone_number, shipping_address, payment_method etc . diagram e multi valued attribute ke double Oval diye draw kora hoy 
 
+
 13. Complex Attribute : 
 Composite Attribute + MultiValued Attribute = Complex Attribute .
 Example : Address (Title, District, Thana, Village, Post, Road) ----- ekhane Address karo karo multi address thakte pare abar prottekta single address abar onk gula attribute e vag korte hoy . tai eta Complex Attribute 
