@@ -9,7 +9,11 @@ Topic :
 7. Weak Entity Set
 
 8. Attribute
-
+9. Simple Attribute
+10. Composite Attribute
+11. Single Valued Attribute
+12. Multi Valued Attribute
+13. Complex Attribute 
 
 
 
@@ -53,10 +57,18 @@ Attributes abar 2 prokar:
 - Simple Attribute 
 - Composite Attribute
 
-9.  Simple Attribute -- jei attribute ke alada kore r vanga jay na seta Simple Attribute . jemon phone_number, email etc. 
+9.  Simple Attribute :
+jei attribute ke alada kore r vanga jay na seta Simple Attribute . jemon phone_number, email etc. 
 
-10. Composite Attribute -- jei attribute ke alada kore onk vabe vanga jay seta Composite Attribute . jemon Name(first_name, last_name, title), address(city, state, country), membership(type, expire_date, start_date) etc
+10. Composite Attribute : 
+jei attribute ke alada kore onk vabe vanga jay seta Composite Attribute . jemon Name(first_name, last_name, title), address(city, state, country), membership(type, expire_date, start_date) etc
 
+11. Single Valued Attribute :
+jei attribute er single value thakbe, multi value hobe na setake Single Valued Attribute bole . jemon user_name, student_id etc . diagram e single valued attribute ke single Oval diye draw kora hoy 
+
+
+12. Multi Valued Attribute : 
+jei attribute er value multiple thakte pare take multi valued attribute bole . jemon phone_number, shipping_address, payment_method etc . diagram e multi valued attribute ke double Oval diye draw kora hoy 
 
 
 
