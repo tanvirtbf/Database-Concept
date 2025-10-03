@@ -241,3 +241,122 @@ Performance ও Relationship সহজ করার জন্য।
 Natural Key হতে পারে: email (কারণ প্রতিটি কাস্টমারের আলাদা ইমেইল থাকে)।
 
 Surrogate Key হতে পারে: customer_id (Auto Increment)।
+
+
+
+
+
+
+
+
+
+✅ Types of Data Integrity
+
+ডাটাবেসে Data Integrity বজায় রাখার জন্য কয়েকটি ধরণের Integrity Constraint ব্যবহার করা হয়। এর মধ্যে মূলত চারটি ভাগ পাওয়া যায়—
+
+1. Entity Integrity
+
+Definition:
+Entity Integrity নিশ্চিত করে যে প্রতিটি টেবিলের row (tuple) কে এককভাবে (uniquely) সনাক্ত করা যায়।
+
+How?
+এটা সাধারনত Primary Key Constraint ব্যবহার করে করা হয়।
+
+Rules:
+
+Primary Key কখনো NULL হতে পারবে না।
+
+Primary Key unique হতে হবে।
+
+Example:
+
+CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100)
+);
+
+
+এখানে customer_id প্রতিটি কাস্টমারকে আলাদাভাবে চিহ্নিত করছে।
+
+2. Referential Integrity
+
+Definition:
+Referential Integrity নিশ্চিত করে যে দুটি টেবিলের মধ্যে সম্পর্ক (relationship) সবসময় সঠিক থাকে।
+
+How?
+এটা সাধারনত Foreign Key Constraint ব্যবহার করে করা হয়।
+
+Rules:
+
+কোনো টেবিলে Foreign Key হিসাবে থাকা মান অবশ্যই অন্য টেবিলের Primary Key এর সাথে মিলে যেতে হবে।
+
+যদি Parent Table থেকে ডেটা ডিলিট হয়, তাহলে Child Table-এ সেই ডেটা orphan হয়ে থাকা উচিত নয় (ON DELETE rules)।
+
+Example:
+
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+
+এখানে Orders.customer_id সবসময় Customers.customer_id এর সাথে মিলবে।
+
+3. Domain Integrity
+
+Definition:
+Domain Integrity নিশ্চিত করে যে একটি কলামের (attribute) মধ্যে শুধু valid value থাকবে।
+
+How?
+এটা Data Type, Constraints (NOT NULL, CHECK, DEFAULT) ইত্যাদি ব্যবহার করে করা হয়।
+
+Rules:
+
+নির্দিষ্ট range/format অনুযায়ী ডেটা থাকতে হবে।
+
+অবৈধ বা ভুল মান insert করা যাবে না।
+
+Example:
+
+CREATE TABLE Products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(50) NOT NULL,
+    price DECIMAL(10,2) CHECK (price > 0)
+);
+
+
+এখানে price অবশ্যই 0 এর চেয়ে বড় হতে হবে।
+
+4. User-Defined Integrity
+
+Definition:
+User-Defined Integrity হলো ব্যবহারকারীর নির্দিষ্ট custom rules যা অন্য কোনো Integrity (Entity, Referential, Domain) দ্বারা কভার করা যায় না।
+
+How?
+এটা সাধারণত Triggers, Stored Procedures, Custom Constraints এর মাধ্যমে করা হয়।
+
+Example:
+
+একজন কাস্টমার একই দিনে সর্বোচ্চ ৫টা অর্ডার করতে পারবে — এটা Business Rule, যা User-Defined Integrity এর মধ্যে পড়ে।
+
+CREATE TRIGGER limit_orders
+BEFORE INSERT ON Orders
+FOR EACH ROW
+BEGIN
+    IF (SELECT COUNT(*) FROM Orders 
+        WHERE customer_id = NEW.customer_id 
+        AND DATE(order_date) = CURDATE()) >= 5
+    THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'Daily order limit exceeded!';
+    END IF;
+END;
+
+📌 Summary Table
+Type	Ensures What?	Technique Used
+Entity Integrity	প্রতিটি row ইউনিক	Primary Key
+Referential Integrity	Table সম্পর্ক ঠিক আছে	Foreign Key
+Domain Integrity	Column value সঠিক	Data Type, Constraints
+User-Defined Integrity	Business rules মেনে চলা	Triggers, Stored Procedures
