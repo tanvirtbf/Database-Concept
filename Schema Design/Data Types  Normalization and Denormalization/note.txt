@@ -5,3 +5,11 @@ CREATE DATABASE 'database_name';
 
 ------------ 2. Connect a Database ------------
 use 'database_name';
+
+
+------------ Data Type ---------- 
+
+
+Charset ----------- 
+
+Collate ---------- 
