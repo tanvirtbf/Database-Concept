@@ -555,3 +555,9 @@ Child এ এমন data ঢুকে যা Parent এ নেই (Invalid Inser
 Parent delete হয়ে যায় কিন্তু Child থেকে যায় (Invalid Delete)।
 
 Parent এর Key update হলেও Child update না হয় (Invalid Update)।
+
+
+
+
+
+
