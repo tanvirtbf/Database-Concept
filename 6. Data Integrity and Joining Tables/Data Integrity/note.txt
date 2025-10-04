@@ -561,3 +561,45 @@ Parent এর Key update হলেও Child update না হয় (Invalid Update
 
 
 
+
+Domain Integrity — পুরো বিবরণ (বাংলায়)
+১) Domain Integrity কী?
+
+Domain integrity বলতে বোঝায় প্রতিটি কলামের (attribute) জন্য তার সম্ভাব্য মানের সীমা/ডোমেইন বা বৈধ মানগুলো ঠিক করে দেওয়া। সহজ কথায়:
+
+একটা কলামে কোন ধরণের ডেটা যাবে, কত দীর্ঘ হবে, কোন ফরম্যাটে হবে, কোন রেঞ্জের বাইরে যাবে না — এগুলো সব Domain Integrity দ্বারা নিশ্চিত করা হয়।
+
+উদাহারণ: age = 0–120 (integer), email = সঠিক ই-মেইল ফরম্যাট, price = non-negative decimal(10,2), country_code = 3-letter ISO uppercase।
+
+২) কেন দরকার?
+
+ডাটার মানাযুক্ততা (data quality) বজায় রাখে।
+
+ব্যবসায়িক নিয়ম (business rules) DB লেভেলে নিশ্চিত করে—অ্যাপ কোড ছাড়াও।
+
+রিপোর্ট, হিসাব, অ্যাগ্রিগেশন সঠিক রাখে।
+
+later migrations বা analytics সহজ হয় কারণ ডেটা predictable থাকে।
+
+৩) Domain Integrity কী কী দিয়ে enforce করা যায়? (Database-level tools)
+
+Data types — INTEGER, VARCHAR(n), DATE, DECIMAL(p,s), TIMESTAMP WITH TIME ZONE ইত্যাদি।
+
+NOT NULL — কলাম খালি রাখা যাবে না।
+
+UNIQUE — নির্দিষ্ট ডোমেইনে duplicate মান রোধ করে।
+
+DEFAULT — যদি ইনসার্টে মান না দেয় তবে ডিফল্ট যাবে (ডোমেইন পূরণে সহায়ক)।
+
+CHECK constraints — কাস্টম লজিক: CHECK (age BETWEEN 0 AND 120) ইত্যাদি।
+
+ENUM / CREATE TYPE / CREATE DOMAIN (DB অনুযায়ী) — সীমিত মানের সেট। (Postgres-এ CREATE DOMAIN ও CREATE TYPE আছে)।
+
+Column collations / charset — টেক্সট ডোমেইনে কেস সেনসিটিভিটি বা ভাষাভিত্তিক নিয়ম নিয়ন্ত্রণে লাগে।
+
+Triggers / Stored Procedures — জটিল কন্ডিশন যেখানে CHECK সহজে লেখা যাবে না।
+
+NoSQL validators — MongoDB এর JSON Schema ভ্যালিডেটর ইত্যাদি।
+
+
+
