@@ -953,7 +953,7 @@ E-commerce: Product stock যদি ০ হয় তবে order accept করা 
 
 Hospital: একজন ডাক্তার দিনে সর্বোচ্চ ৫০টি appointment নিতে পারবেন।
 
-✅ সারসংক্ষেপ
+✅ সারসংক্ষেপ  
 
 User-Defined Integrity = ইউজার/ডেভেলপারের কাস্টম business rules যা ডাটাবেজে enforce করা হয়।
 
